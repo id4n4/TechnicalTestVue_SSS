@@ -1,7 +1,7 @@
 <template>
-    <form class="bg-green-50 shadow-md rounded p-8 m-4">
+    <form class="bg-gray-50 shadow-md rounded p-8 m-4">
         <!-- TimeLine -->
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center">
           <div class="flex items-center">
             <button :class="{'bg-blue-500 text-white': currentStep >= 1}"
                     @click.prevent="changeStep(1)" 
@@ -458,6 +458,7 @@ export default {
             if (data.every((e) => e.valid == true)) {
                 this.$emit("submit", data);
             } else {
+                console.log("Error: Campos invalidos")
                 this.dataInput3.map(e => e.showError = true)
             }
         },
