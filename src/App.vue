@@ -2,8 +2,8 @@
   <h1 class="text-3xl font-bold underline text-center">
     Hello world!
   </h1>
-  <Form/>
-  <Modal/>
+  <Form @submit="handleSubmit"/>
+  <Modal @closeModal="closeModal" v-if="showModal"/>
 </template>
 
 <script>
@@ -14,6 +14,21 @@ export default {
   name: 'App',
   components: {
     Modal,Form
+  },
+  data() {
+    return {
+      formData: [],
+      showModal: false
+    }
+  },
+  methods: {
+    handleSubmit(data) {
+      this.formData = data
+      this.showModal = true;
+    },
+    closeModal(){
+      this.showModal = false
+    }
   }
 }
 </script>
