@@ -1,5 +1,9 @@
 <template>
-  <h1 id="#app">Holamundo</h1>
+  <h1 class="text-3xl font-bold underline text-center">
+    Hello world!
+  </h1>
+  <Form/>
+  <Modal/>
 </template>
 
 <script>
@@ -15,12 +19,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
