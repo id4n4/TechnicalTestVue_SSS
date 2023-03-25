@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-3xl font-bold underline text-center">
-    Hello world!
+    Prueba técnica desarrollador front-end
   </h1>
   <Form @submit="handleSubmit"/>
   <Modal @closeModal="closeModal" v-if="showModal"/>
